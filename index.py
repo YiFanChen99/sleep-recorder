@@ -10,6 +10,10 @@ def default():
 def index():
 	return render_template('index.html')
     
+@app.route('/GeneralInput/')
+def general_input():
+    return render_template('GeneralInput.html')
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
     

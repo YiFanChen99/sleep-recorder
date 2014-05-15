@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/datepicker.css') }}">
+
+	<script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+	
+	<title>General Input</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="form-group"></div>
+	
+		<form class="form-horizontal well" role="form">
+			<div class="form-group">
+				<label for="startSleeping" class="col-sm-2 control-label">日期　　</label>
+				<input type="text" class="datepicker col-sm-3" data-date-format="yyyy-mm-dd">
+				<script type="text/javascript">
+					$('.datepicker').datepicker();
+				</script>
+			</div>
+		
+			<div class="form-group">
+				<label for="startSleeping" class="col-sm-2 control-label">入眠時間</label>
+				<div class="col-sm-4">
+					<select class="form-control">
+						<option value="default">預設</option>
+						<option value="before10">十點前</option>
+						<option value="before11">十一點前</option>
+						<option value="before12">十二點前</option>
+						<option value="after12">十二點後</option>
+						<option value="day">白天</option>
+						<option value="eve">傍晚</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="onSleeping" class="col-sm-2 control-label">睡眠長度</label>
+				<div class="col-sm-2">
+					<input class="form-control" id="hourOnSleep" placeholder="小時">
+				</div>
+				<div class="col-sm-2">
+					<select class="form-control">
+						<option value="0minute">0 分鐘</option>
+						<option value="10minute">10 分鐘</option>
+						<option value="20minute">20 分鐘</option>
+						<option value="30minute">30 分鐘</option>
+						<option value="40minute">40 分鐘</option>
+						<option value="50minute">50 分鐘</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="onSleeping" class="col-sm-2 control-label">睡眠品質</label>
+				<div class="col-sm-4">
+					<select class="form-control">
+						<option value="0minute">正常</option>
+						<option value="10minute">輕微輾轉</option>
+						<option value="20minute">難以入眠</option>
+						<option value="20minute">時睡時醒</option>
+					</select>
+				</div>
+			</div>
+		</form>
+		
+		<div class="col-sm-offset-1 col-sm-5">
+			<button class="btn btn-primary btn-lg btn-block" type="button">送交</button>
+		</div>
+	</div>
+</body>
+
+</html>
