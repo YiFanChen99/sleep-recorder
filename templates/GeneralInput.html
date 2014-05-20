@@ -17,19 +17,19 @@
 	<div class="container">
 		<div class="form-group"></div>
 	
-		<form class="form-horizontal well" role="form">
+		<form class="form-horizontal well" role="form" method="post">
 			<div class="form-group">
-				<label for="startSleeping" class="col-sm-2 control-label">日期　　</label>
-				<input type="text" class="datepicker col-sm-3" data-date-format="yyyy-mm-dd">
+				<label class="col-sm-2 control-label">日期　　</label>
+				<input name="date" type="text" class="datepicker col-sm-3" data-date-format="yyyy-mm-dd">
 				<script type="text/javascript">
 					$('.datepicker').datepicker();
 				</script>
 			</div>
 		
 			<div class="form-group">
-				<label for="startSleeping" class="col-sm-2 control-label">入眠時間</label>
+				<label class="col-sm-2 control-label">入眠時間</label>
 				<div class="col-sm-4">
-					<select class="form-control">
+					<select name="start_sleeping" class="form-control">
 						<option value="default">預設</option>
 						<option value="before10">十點前</option>
 						<option value="before11">十一點前</option>
@@ -42,12 +42,12 @@
 			</div>
 			
 			<div class="form-group">
-				<label for="onSleeping" class="col-sm-2 control-label">睡眠長度</label>
+				<label class="col-sm-2 control-label">睡眠長度</label>
 				<div class="col-sm-2">
-					<input class="form-control" id="hourOnSleep" placeholder="小時">
+					<input class="form-control" name="hours_on_sleep" placeholder="小時">
 				</div>
 				<div class="col-sm-2">
-					<select class="form-control">
+					<select name="minutes_on_sleep" class="form-control">
 						<option value="0minute">0 分鐘</option>
 						<option value="10minute">10 分鐘</option>
 						<option value="20minute">20 分鐘</option>
@@ -59,9 +59,9 @@
 			</div>
 			
 			<div class="form-group">
-				<label for="onSleeping" class="col-sm-2 control-label">睡眠品質</label>
+				<label class="col-sm-2 control-label">睡眠品質</label>
 				<div class="col-sm-4">
-					<select class="form-control">
+					<select name="adjust_minute" class="form-control">
 						<option value="0minute">正常</option>
 						<option value="10minute">輕微輾轉</option>
 						<option value="20minute">難以入眠</option>
@@ -69,11 +69,15 @@
 					</select>
 				</div>
 			</div>
+			
+            <div class="col-sm-offset-1 col-sm-2">
+                <button class="btn btn-info btn-lg btn-block" type="button" onClick="location.href='../'">回上層</button>
+            </div>
+
+            <div class="col-sm-2">
+                <button class="btn btn-primary btn-lg btn-block" type="button" onClick="submit()">新增一筆</button>
+            </div>
 		</form>
-		
-		<div class="col-sm-offset-1 col-sm-5">
-			<button class="btn btn-primary btn-lg btn-block" type="button">送交</button>
-		</div>
 	</div>
 </body>
 
