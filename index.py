@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
-from recorder import Recorder
+#from recorder import Recorder
 
 app = Flask(__name__)
 app.debug = True
@@ -44,7 +44,6 @@ def general_input_get():
 
 
 if __name__ == "__main__":
-    recorder = Recorder()
+    #recorder = Recorder()
     app.run(host="0.0.0.0", port=5000)
 
-	
