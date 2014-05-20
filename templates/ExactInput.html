@@ -10,39 +10,27 @@
 				$('.datepicker').datepicker();
 			</script>
 		</div>
-	
+
 		<div class="form-group">
 			<label class="col-sm-2 control-label">入眠時間</label>
-			<div class="col-sm-4">
-				<select name="start_sleeping" class="form-control">
-					<option value="default">預設</option>
-					<option value="before10">十點前</option>
-					<option value="before11">十一點前</option>
-					<option value="before12">十二點前</option>
-					<option value="after12">十二點後</option>
-					<option value="day">白天</option>
-					<option value="eve">傍晚</option>
-				</select>
+			<div class="col-sm-2">
+				<input name="hours_on_sleep" class="form-control" placeholder="小時">
+			</div>
+			<div class="col-sm-2">
+				<input name="minutes_on_sleep" class="form-control" placeholder="分鐘">
 			</div>
 		</div>
-		
+
 		<div class="form-group">
-			<label class="col-sm-2 control-label">睡眠長度</label>
+			<label class="col-sm-2 control-label">起床時間</label>
 			<div class="col-sm-2">
-				<input class="form-control" name="hours_on_sleep" placeholder="小時">
+				<input name="hours_on_wake" class="form-control" placeholder="小時">
 			</div>
 			<div class="col-sm-2">
-				<select name="minutes_on_sleep" class="form-control">
-					<option value="0">0 分鐘</option>
-					<option value="10">10 分鐘</option>
-					<option value="20">20 分鐘</option>
-					<option value="30">30 分鐘</option>
-					<option value="40">40 分鐘</option>
-					<option value="50">50 分鐘</option>
-				</select>
+				<input name="minutes_on_wake" class="form-control" placeholder="分鐘">
 			</div>
 		</div>
-		
+
 		<div class="form-group">
 			<label class="col-sm-2 control-label">睡眠品質</label>
 			<div class="col-sm-4">

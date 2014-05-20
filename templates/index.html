@@ -1,22 +1,10 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+{% extends "layout.html" %}
+{% block body %}
+    <div class="form-group"></div>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/datepicker.css') }}">
+    <div class="col-sm-4">
+	    <button class="btn btn-info btn-lg btn-block" type="button" onClick="location.href='GeneralInput'">GeneralInput</button>
 
-	<script src="{{ url_for('static', filename='js/jquery-2.1.1.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-	<script src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
-	
-	<title>Index</title>
-</head>
-
-<body>
-	<div class="container">
-		<a href='../GeneralInput'>GeneralInput</a>
-	</div>
-</body>
-
-</html>
+	    <button class="btn btn-info btn-lg btn-block" type="button" onClick="location.href='ExactInput'">ExactInput</button>
+    </div>
+{% endblock %}
