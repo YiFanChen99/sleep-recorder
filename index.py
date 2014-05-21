@@ -15,10 +15,9 @@ def index():
 def exact_input_post():
     message = ""
     message += "date=" + request.form['date'] + "\n"
-    message += "hours_on_sleep=" + request.form['hours_on_sleep'] + "\n"
-    message += "minutes_on_sleep=" + request.form['minutes_on_sleep'] + "\n"
-    message += "hours_on_wake=" + request.form['hours_on_wake'] + "\n"
-    message += "minutes_on_wake=" + request.form['minutes_on_wake'] + "\n"
+    message += "ending_time=" + request.form['ending_time'] + "\n"
+    message += "ending_time=" + request.form['ending_time'] + "\n"
+    message += "adjust_minute=" + request.form['adjust_minute'] + "\n"
     return message
 
 
@@ -46,4 +45,3 @@ def general_input_get():
 if __name__ == "__main__":
     #recorder = Recorder()
     app.run(host="0.0.0.0", port=5000)
-
